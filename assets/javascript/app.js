@@ -2,13 +2,17 @@ $(function () {
 
     // show the objects in buttons array as buttons
     function showButtons() {
-        var buttons = [
+        var topics = [
             "jack nicholson",
             "robot",
-            "monkey"
+            "monkey",
+            "space", 
+            "rick and morty",
+            "snakes",
+            "Bob Ross"
         ];
-        for (var i = 0; i < buttons.length; i++) {
-            $("#buttons").append('<button id="question" data-person="' + buttons[i] + '">' + buttons[i] + '</button>');
+        for (var i = 0; i < topics.length; i++) {
+            $("#buttons").append('<button id="question" data-person="' + topics[i] + '">' + topics[i] + '</button>');
         }
     }
     showButtons();
@@ -30,6 +34,7 @@ $(function () {
         var person = $(this).attr("data-person");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
             person + "&api_key=5l53Dh3iTD2VujKK5utYcGxKRCNJVN9n&limit=10";
+            
 
             // var newQ = "https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
             // data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
@@ -51,7 +56,10 @@ $(function () {
                     var p = $("<p>").text("Rating: " + rating);
 
                     var personImage = $("<img>");
-                    personImage.attr("src", results[i].images.fixed_height.url);
+                    personImage.attr("src", results[i].images.fixed_height_still.url);
+                    console.log(results);
+
+                
 
                     gifDiv.prepend(p);
                     gifDiv.prepend(personImage);
