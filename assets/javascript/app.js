@@ -1,23 +1,38 @@
 $(function () {
-
+    var topics = [
+        "jack nicholson",
+        "robot",
+        "monkey",
+        "space",
+        "rick and morty",
+        "snakes",
+        "Bob Ross"
+    ];
     // show the objects in buttons array as buttons
     function showButtons() {
-        var topics = [
-            "jack nicholson",
-            "robot",
-            "monkey",
-            "space",
-            "rick and morty",
-            "snakes",
-            "Bob Ross"
-        ];
+        $("#buttons").empty();
         for (var i = 0; i < topics.length; i++) {
             var button = $("<button>")
             $("#buttons").append(button);
             button.attr("data-person", topics[i]);
-            button.html(topics[i]);
+            button.text(topics[i]);
         }
     }
+
+    $("#addAnything").on("click", function (event) {
+        // event.preventDefault() prevents the form from trying to submit itself.
+        // We're using a form so that the user can hit enter instead of clicking the button if they want
+        event.preventDefault();
+
+        // This line will grab the text from the input box
+        var anything = $("#anything-input").val().trim();
+
+        // The movie from the textbox is then added to our array
+        topics.push(anything);
+        showButtons();
+
+    });
+
     showButtons();
 
     $("button").on("click", function () {
@@ -34,11 +49,8 @@ $(function () {
 
                 for (var i = 0; i < results.length; i++) {
                     var gifDiv = $("<div>");
-
                     var rating = results[i].rating;
-
                     var p = $("<p>").text("Rating: " + rating);
-
                     var personImage = $("<img>");
                     personImage.attr("src", results[i].images.fixed_height_still.url);
                     personImage.attr("data-still", results[i].images.fixed_height_still.url);
@@ -59,14 +71,14 @@ $(function () {
                             $(this).attr("data-state", "still");
                         }
                     });
-
                     gifDiv.prepend(p);
                     gifDiv.prepend(personImage);
 
                     $("#gifs-appear-here").prepend(gifDiv);
                 }
+                // showButtons();
 
             });
-
+        $("#gifs-appear-here").empty();
     });
 });
