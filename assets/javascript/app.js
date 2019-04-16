@@ -25,18 +25,20 @@ $(function () {
         // We're using a form so that the user can hit enter instead of clicking the button if they want
         event.preventDefault();
 
+
         // This line will grab the text from the input box
         var anything = $("#anything-input").val().trim();
+        $("#anything-input").val("");
 
         // The movie from the textbox is then added to our array
         topics.push(anything);
-        
+
         showButtons();
         getData();
 
     });
-    
-    
+
+
     getData();
 
     function getData() {
@@ -81,12 +83,13 @@ $(function () {
                         gifDiv.prepend(personImage);
 
                         $("#gifs-appear-here").prepend(gifDiv);
-                        
+
                     }
 
                 });
             $("#gifs-appear-here").empty();
+
         });
-        
+
     }
 });
