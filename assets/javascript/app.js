@@ -28,7 +28,7 @@ $(function () {
 
         // This line will grab the text from the input box
         var anything = $("#anything-input").val().trim();
-        $("#anything-input").val("");
+        // $("#anything-input").val("");
 
         // The movie from the textbox is then added to our array
         topics.push(anything);
