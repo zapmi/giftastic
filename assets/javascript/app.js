@@ -7,7 +7,12 @@ $(function () {
         "space",
         "rick and morty",
         "snakes",
-        "Bob Ross"
+        "Bob Ross",
+        "robot",
+        "monkey",
+        "space",
+        "rick and morty",
+        "snakes",
     ];
     // show the objects in buttons array as buttons
     function showButtons() {
@@ -15,6 +20,7 @@ $(function () {
         for (var i = 0; i < topics.length; i++) {
             var button = $("<button>")
             $("#topicButtons").append(button);
+            button.addClass("butTopics");
             button.attr("data-person", topics[i]);
             button.text(topics[i]);
         }

@@ -1,16 +1,30 @@
-@font-face {
-    font-family: "deutschGotisch";
-    src: url("../fonts/deutschGotisch.otf") format("woff"), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    url("../fonts/deutschGotisch.otf") format('truetype');
-    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
 
 body {
     background-color: goldenrod;
+    font-family: 'Lobster', cursive;
     font-size: 30px;
     text-align: center;
 }
 
+p {
+    font-family: 'Lobster', cursive;
+}
+
+.butTopics {
+    font-family: 'Lobster', cursive;
+    font-size: 33px;
+    margin: 3px;
+}
+
+.subButt {
+    font-family: 'Lobster', cursive;
+}
+
 #anything-input {
-    color: white;
+    color: ghostwhite;
+    font-family: 'Lobster', cursive; 
+}
+
+#inputLab {
+    font-family: 'Lobster', cursive;
 }
