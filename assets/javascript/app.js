@@ -1,4 +1,5 @@
 $(function () {
+
     var topics = [
         "jack nicholson",
         "robot",
@@ -19,6 +20,13 @@ $(function () {
         }
     }
     showButtons();
+
+    document.onkeydown = function () {
+    document.getElementById("anything-input").style.backgroundColor = "red";
+    }
+    document.onkeyup = function () {
+        document.getElementById("anything-input").style.backgroundColor = "blue";
+        }
 
     $("#addTopic").on("click", function (event) {
         // event.preventDefault() prevents the form from trying to submit itself.
