@@ -15,10 +15,6 @@ $(function () {
         "event horizon",
         "andromeda"
     ];
-
-    
-    $("#my_audio").get(0).play();
-
     // show the objects in buttons array as buttons
     function showButtons() {
         $("#topicButtons").empty();
