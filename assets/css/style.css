@@ -1,5 +1,4 @@
 body {
-    
     font-family: 'Lobster', cursive;
     background-image: url("../images/space.gif");
     background-size: cover;
@@ -10,7 +9,7 @@ body {
 }
 
 header {
-    font-size: 60px;
+    font-size: 80px;
     color: ghostwhite;
     margin: 25px;
 }
@@ -18,30 +17,25 @@ header {
 p {
     color: white;
     font-family: 'Lobster', cursive;
-    font-size: 25px;
+    font-size: 28px;
+    padding: 5px;
 }
 
 .butTopics, .subButt {
     font-family: 'Lobster', cursive;
     font-size: 33px;
-    /* margin: 0 auto; */
     margin: 3px;
-    
-    
 }
 
 .subButt {
     font-size: 33px;
-    /* margin: 0 auto; */
 }
 
 #anything-input {
     color: ghostwhite;
     font-family: 'Lobster', cursive;
     font-size: 33px;
-    margin-right: 5px; 
-    
-    
+    margin-right: 5px;
 }
 
 #inputLab {
