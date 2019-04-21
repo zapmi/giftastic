@@ -1,18 +1,18 @@
 $(function () {
 
     var topics = [
-        "jack nicholson",
-        "robot",
-        "monkey",
+        "planet",
+        "astroid",
+        "milky way",
         "space",
-        "rick and morty",
-        "snakes",
-        "Bob Ross",
-        "robot",
-        "monkey",
-        "space",
-        "rick and morty",
-        "snakes",
+        "wormhole",
+        "time travel",
+        "aliens",
+        "stars",
+        "quantum",
+        "cosmos",
+        "astronomy",
+        "event horizon",
     ];
     // show the objects in buttons array as buttons
     function showButtons() {
