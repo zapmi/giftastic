@@ -2,7 +2,7 @@ $(function () {
 
     var topics = [
         "planet",
-        "astroid",
+        "asteroid",
         "milky way",
         "space",
         "wormhole",
